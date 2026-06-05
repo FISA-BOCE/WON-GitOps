@@ -1,16 +1,25 @@
 replicaCount: 1
 
 image:
-  repository: 589077667723.dkr.ecr.ap-northeast-2.amazonaws.com/won-card-channel-server
-  tag: dev
+  repository: nginx
+  tag: "1.27-alpine"
+
+service:
+  targetPort: 80
 
 spring:
   profile: dev
+
+env: []
 
 config:
   enabled: true
   data:
     LOG_LEVEL: INFO
+
+probes:
+  enabled: true
+  path: /
 
 resources:
   requests:
