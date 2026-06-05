@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: card-channel-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/FISA-BOCE/WON-GitOps.git
+    targetRevision: develop
+    path: apps/card-channel-server
+    helm:
+      valueFiles:
+        - ../../environments/card/dev/card-channel-server-values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: card-channel-dev
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
