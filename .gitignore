@@ -1,0 +1,37 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# logs
+*.log
+
+# env / secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.kubeconfig
+kubeconfig*
+secret*.yaml
+secrets*.yaml
+
+# Helm
+*.tgz
+charts/
+Chart.lock
+
+# Terraform leftovers, just in case
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.tfvars
+
+# Kubernetes local/debug files
+kubeconfig
+*.bak
+*.tmp
