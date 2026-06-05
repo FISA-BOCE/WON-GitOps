@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: 589077667723.dkr.ecr.ap-northeast-2.amazonaws.com/won-invest-channel-server
+  tag: dev
+
+spring:
+  profile: dev
+
+config:
+  enabled: true
+  data:
+    LOG_LEVEL: INFO
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
