@@ -1,16 +1,18 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: "1.27-alpine"
+  repository: 589077667723.dkr.ecr.ap-northeast-2.amazonaws.com/won-card-channel-server
+  tag: dev
 
 service:
-  targetPort: 80
+  targetPort: 8081
 
 spring:
   profile: dev
 
-env: []
+env:
+  - name: SERVER_PORT
+    value: "8081"
 
 config:
   enabled: true
@@ -19,7 +21,7 @@ config:
 
 probes:
   enabled: true
-  path: /
+  path: /actuator/health
 
 resources:
   requests:
