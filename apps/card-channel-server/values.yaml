@@ -31,6 +31,10 @@ config:
   enabled: true
   data: {}
 
+secret:
+  enabled: false
+  name: ""
+
 resources:
   requests:
     cpu: 100m
