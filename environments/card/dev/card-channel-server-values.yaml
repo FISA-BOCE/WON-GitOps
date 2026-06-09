@@ -31,6 +31,10 @@ secret:
 probes:
   enabled: true
   path: /actuator/health
+  initialDelaySeconds: 90
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
 
 resources:
   requests:
