@@ -1,14 +1,14 @@
 replicaCount: 1
 
 image:
-  repository: 589077667723.dkr.ecr.ap-northeast-2.amazonaws.com/won-card-channel-server
-  tag: dev
+  repository: 099622554242.dkr.ecr.ap-northeast-2.amazonaws.com/won-card-channel-server
+  tag: manual-test
 
 service:
   targetPort: 8081
 
 spring:
-  profile: dev
+  profile: prod
 
 env:
   - name: SERVER_PORT
@@ -17,7 +17,16 @@ env:
 config:
   enabled: true
   data:
-    LOG_LEVEL: INFO
+    MYSQL_PORT: "3306"
+    MYSQL_DATABASE: won_card_channel_db
+    AWS_REGION: ap-northeast-2
+    CARD_CORE_BASE_URL: http://dummy-card-core:8080
+    INVEST_CHANNEL_BASE_URL: http://dummy-invest-channel:8080
+    COMMON_BASE_URL: http://dummy-common:8080
+
+secret:
+  enabled: true
+  name: card-channel-secret
 
 probes:
   enabled: true
