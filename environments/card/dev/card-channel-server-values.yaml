@@ -20,9 +20,6 @@ config:
     MYSQL_PORT: "3306"
     MYSQL_DATABASE: won_card_channel_db
     AWS_REGION: ap-northeast-2
-    CARD_CORE_BASE_URL: http://dummy-card-core:8080
-    INVEST_CHANNEL_BASE_URL: http://dummy-invest-channel:8080
-    COMMON_BASE_URL: http://dummy-common:8080
 
 secret:
   enabled: true
