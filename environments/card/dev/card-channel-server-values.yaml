@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: 099622554242.dkr.ecr.ap-northeast-2.amazonaws.com/won-card-channel-server
-  tag: manual-test
+  tag: manual-test-amd64
 
 service:
   targetPort: 8081
