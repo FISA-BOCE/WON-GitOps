@@ -14,7 +14,7 @@ spec:
         - ../../environments/securities/dev/invest-channel-server-values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: invest-channel-dev
+    namespace: securities-dev
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
