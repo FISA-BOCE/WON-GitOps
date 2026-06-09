@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: 099622554242.dkr.ecr.ap-northeast-2.amazonaws.com/won-invest-channel-server
-  tag: main-placeholder
+  tag: main-1f53d69
 
 service:
   targetPort: 8083
