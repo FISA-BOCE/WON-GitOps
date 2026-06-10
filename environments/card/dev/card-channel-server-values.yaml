@@ -5,6 +5,8 @@ image:
   tag: main-646a73a
 
 service:
+  type: LoadBalancer
+  port: 80
   targetPort: 8081
 
 spring:
