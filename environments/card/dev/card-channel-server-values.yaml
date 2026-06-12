@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: 099622554242.dkr.ecr.ap-northeast-2.amazonaws.com/won-card-channel-server
-  tag: main-646a73a
+  tag: main-61a5333
 
 service:
   type: LoadBalancer
