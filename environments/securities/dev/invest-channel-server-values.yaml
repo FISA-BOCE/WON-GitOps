@@ -22,6 +22,10 @@ config:
     MYSQL_PORT: "3306"
     MYSQL_DATABASE: won_invest_channel_db
     AWS_REGION: ap-northeast-2
+    AWS_SQS_ENDPOINT: ""
+    SWEEP_OUTBOX_PUBLISHER_ENABLED: "true"
+    SWEEP_CONSUMER_ENABLED: "true"
+    SWEEP_CONSUMER_WAIT_TIME_SECONDS: "10"
 
 secret:
   enabled: true
