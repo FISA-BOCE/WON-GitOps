@@ -23,6 +23,7 @@ config:
     MYSQL_DATABASE: won_invest_channel_db
     AWS_REGION: ap-northeast-2
     AWS_SQS_ENDPOINT: ""
+    FEATURES_AIDB_ENABLED: "true"
     SWEEP_OUTBOX_PUBLISHER_ENABLED: "true"
     SWEEP_CONSUMER_ENABLED: "true"
     SWEEP_CONSUMER_WAIT_TIME_SECONDS: "10"
