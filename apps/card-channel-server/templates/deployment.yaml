@@ -5,7 +5,9 @@ metadata:
   labels:
     {{- include "card-channel-server.labels" . | nindent 4 }}
 spec:
+  {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
+  {{- end }}
   selector:
     matchLabels:
       {{- include "card-channel-server.selectorLabels" . | nindent 6 }}

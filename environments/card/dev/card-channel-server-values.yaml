@@ -1,5 +1,11 @@
 replicaCount: 1
 
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 70
+
 image:
   repository: 099622554242.dkr.ecr.ap-northeast-2.amazonaws.com/won-card-channel-server
   tag: main-10a7ed1
